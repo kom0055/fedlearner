@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
     role: {
       type: DataTypes.STRING(16),
       allowNull: false,
-      comment: 'leader | follower',
+      comment: 'Leader | Follower',
     },
     sdk_version: {
       type: DataTypes.STRING(64),

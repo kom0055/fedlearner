@@ -144,7 +144,7 @@ function generateYaml(federation, job, job_params, ticket) {
               { name: 'APPLICATION_ID', value: job.name },
               {
                 name: 'OUTPUT_BASE_DIR',
-                value: joinPath(k8s_settings.storage_root_path, 'job_output', job.name)
+                value: joinPath(k8s_settings.storage_root_path, 'job_output', job.name),
               },
             ],
             imagePullPolicy: 'IfNotPresent',
