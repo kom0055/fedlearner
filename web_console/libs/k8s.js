@@ -46,6 +46,7 @@ class KubernetesClient {
     const response = await this.client.post(`namespaces/${namespace}/fedlearner/v1alpha1/flapps`, {
       json: fl_app
     });
+    console.log(response)
     return response.json();
   }
 

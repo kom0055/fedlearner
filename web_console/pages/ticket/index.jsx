@@ -62,7 +62,11 @@ export default function TicketList() {
           <Form
             title="Create Ticket"
             fields={fields}
-            onSubmit={(value) => createTicket(value)}
+            onSubmit={(value) => createTicket({
+              ...value,
+              public_params: JSON.parse(value.public_params),
+              private_params: JSON.parse(value.private_params),
+            })}
             onOk={onOk}
             onCancel={toggleForm}
           />
